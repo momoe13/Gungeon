@@ -9,6 +9,9 @@ public class NavMeshAgent2D : MonoBehaviour
 
     [HideInInspector]//常にUnityエディタから非表示
     private Vector2 trace_area = Vector2.zero;
+
+
+    //パターン１
     public Vector2 destination
     {
         get { return trace_area; }
@@ -18,11 +21,21 @@ public class NavMeshAgent2D : MonoBehaviour
             Trace(transform.position, value);
         }
     }
+
+
+    //パターン２
     public bool SetDestination(Vector2 target)
     {
         destination = target;
         return true;
     }
+
+
+    /*メモ
+     * 他スクリプトからパターン１又は２が呼び出される
+     *　　↓
+     * パターン１からTraceが呼ばれ、経路を求めて呼び出してきたオブジェクトの位置を変更する
+     */
 
     private void Trace(Vector2 current, Vector2 target)
     {
