@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class playerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] 
+    private GameObject bullets;
+    private void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+           UseWeapon();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void UseWeapon()
     {
-        
+
+        //TODO:e‚²‚Æ‚É•ª‚¯‚é•K—v‚ª‚ ‚é
+        Instantiate(bullets, transform.position, Quaternion.identity);
     }
 }

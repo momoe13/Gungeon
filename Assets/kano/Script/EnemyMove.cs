@@ -13,6 +13,7 @@ public class EnemyMove : MonoBehaviour
     [SerializeField]
     bool searchFlg = false;//ƒvƒŒƒCƒ„[‚Æ‚Ì‹——£”»’è
 
+
     private void Start()
     {
         //NavMesh2D‚Ìæ“¾
