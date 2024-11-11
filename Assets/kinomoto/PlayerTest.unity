@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 682595514}
   - component: {fileID: 682595513}
   - component: {fileID: 682595512}
-  - component: {fileID: 682595511}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -142,19 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &682595511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682595510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1727b80f3d49d54d9703f633b9b6325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!50 &682595512
 Rigidbody2D:
   serializedVersion: 4
