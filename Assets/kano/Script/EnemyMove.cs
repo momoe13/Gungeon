@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
@@ -68,5 +69,9 @@ public class EnemyMove : MonoBehaviour
     private void Damage()
     {
         hp--;
+        if (hp < 0) 
+        { 
+           Destroy(this.gameObject);
+        }
     }
 }

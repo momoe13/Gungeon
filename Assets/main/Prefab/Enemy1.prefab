@@ -162,6 +162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   searchFlg: 0
+  bullets: {fileID: 0}
+  attackTime: 0
+  hp: 0
 --- !u!50 &3113216248074631938
 Rigidbody2D:
   serializedVersion: 4
