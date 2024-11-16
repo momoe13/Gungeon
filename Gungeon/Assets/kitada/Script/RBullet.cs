@@ -6,6 +6,7 @@ public class RBullet : MonoBehaviour
 {
     [HideInInspector] public float deg = 0;
     [HideInInspector] public float speed = 1;
+    [HideInInspector] public string aTag;
 
     private  bool isAddList = false;
     private Rigidbody2D rb;
@@ -17,5 +18,13 @@ public class RBullet : MonoBehaviour
         float sin = Mathf.Sin(rad);//ラジアンからsinを求める
         float cos = Mathf.Cos(rad);//ラジアンからcosを求める
         rb.velocity = new Vector2(cos * speed, sin * speed);//求めたsincosを速度に代入する
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag != aTag && collision.tag != aTag + "Attack")//弾を放ったキャラ以外か同じTag以外のオブジェクトに触れたとき
+        {
+            Destroy(this.gameObject);//このオブジェクトを削除
+        }
     }
 }
