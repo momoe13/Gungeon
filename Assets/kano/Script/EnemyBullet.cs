@@ -27,4 +27,5 @@ public class EnemyBullet : MonoBehaviour
         float cos = Mathf.Cos(rad);//ƒ‰ƒWƒAƒ“‚©‚çcos‚ğ‹‚ß‚é
         rb.velocity = new Vector2(cos * speed, sin * speed);//‹‚ß‚½sincos‚ğ‘¬“x‚É‘ã“ü‚·‚é
     }
+
 }

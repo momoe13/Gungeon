@@ -4792,6 +4792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy1
       objectReference: {fileID: 0}
+    - target: {fileID: 2789885406181288532, guid: 7fb5d42f387a8bd488cf52ec3f1a0636, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3788484349691421613, guid: 7fb5d42f387a8bd488cf52ec3f1a0636, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4800,6 +4804,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1130673976}
+    - target: {fileID: 4470562143222934413, guid: 7fb5d42f387a8bd488cf52ec3f1a0636, type: 3}
+      propertyPath: bullets
+      value: 
+      objectReference: {fileID: 9092058165552777036, guid: 5277a319ed692b947bedbcfa5e73df15, type: 3}
     - target: {fileID: 8864132664540036559, guid: 7fb5d42f387a8bd488cf52ec3f1a0636, type: 3}
       propertyPath: speed
       value: 2.25
