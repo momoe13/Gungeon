@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   degBullet: 0
   bullet: {fileID: 3657495644861345709, guid: 29522524a74735042b9bcca6d92780a3, type: 3}
-  speed: 10.91
-  startDeg: 45
+  speed: 5
+  startDeg: 0
   bulletNumber: 12
+  attackTag: Player

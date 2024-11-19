@@ -9,9 +9,10 @@ public class RadiationBulletHub : MonoBehaviour
     [HideInInspector] public float degBullet;//’e“¹‚ÌŠp“x
 
     [SerializeField] private GameObject bullet;
-    [SerializeField] private float speed;//’e‚ÌƒXƒs[ƒh
+    [SerializeField] private float speed;//’e‚Ì‘¬“x
     [SerializeField] private float startDeg = 0f;//’e‚Ìon‚ß‚éŠp“x
     [SerializeField] private int bulletNumber;//’e‚Ì”
+    [SerializeField] private string attackTag;//’e‚ÌTag
 
     private Rigidbody2D rb;
 
@@ -25,10 +26,12 @@ public class RadiationBulletHub : MonoBehaviour
     {
         for (int i = 0; i < bulletNumber; i++)
         {
+            Debug.Log("a");
             var b = Instantiate(bullet, transform.position, Quaternion.identity);//’e‚Ì¶¬
             bullets.Add(b);//¶¬‚µ‚½’e‚ğƒŠƒXƒg‚É’Ç‰Á
             Fire(b.GetComponent<RBullet>(),i);
         }
+        Destroy(this.gameObject, 1f);//ˆê•bŒã‚ÉHub‚ğíœ
     }
 
     private void Fire(RBullet b,int i)//’e‚Éî•ñ‚ğ“n‚·
@@ -41,6 +44,7 @@ public class RadiationBulletHub : MonoBehaviour
         }
         b.deg = bulletRad * (i + 1) + startDeg;//Šp“x‚Ìó‚¯“n‚µ
         b.speed = speed;//‘¬“x‚Ìó‚¯“n‚µ
+        b.aTag = attackTag;//ƒ^ƒO‚Ìó‚¯“n‚µ
         b.Shot();//’e‚ÌŠÖ”Shot‚ğÀs
     }
 }
