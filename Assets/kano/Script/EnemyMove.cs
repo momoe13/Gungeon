@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
@@ -9,6 +11,8 @@ public class EnemyMove : MonoBehaviour
     NavMeshAgent2D agent;   //NavMesh2Dを使用するための変数
     [SerializeField]
     Transform target;       //追跡するオブジェクト
+
+
 
     
     [SerializeField]
@@ -38,8 +42,10 @@ public class EnemyMove : MonoBehaviour
         //NavMesh2Dの取得
         agent = GetComponent<NavMeshAgent2D>();
 
+
         //弾発射位置の取得
         gun = transform.Find("Gun").transform;
+
     }
 
     private void Update()
@@ -105,3 +111,5 @@ public class EnemyMove : MonoBehaviour
         }
     }
 }
+
+
