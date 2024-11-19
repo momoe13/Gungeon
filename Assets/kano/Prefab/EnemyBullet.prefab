@@ -96,10 +96,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9092058165552777036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ceac5b6495976a44b6eab03bf151d68, type: 3}
+  m_Script: {fileID: 11500000, guid: b1500f89512548244ba18f8581390ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   playerPos: {fileID: 4984725925317120191, guid: adb9c1e1e55680c429f6f625310d2e07, type: 3}
 --- !u!58 &6206138049613297876
 CircleCollider2D:
