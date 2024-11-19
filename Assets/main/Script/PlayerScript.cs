@@ -6,11 +6,12 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
 
-    [SerializeField] private GameObject bullets;
-
     private Rigidbody2D rb;
     private float horizontal;
     private float vertical;
+
+
+    [SerializeField] private GameObject bullets;
 
     private void Awake()
     {
@@ -23,9 +24,11 @@ public class PlayerScript : MonoBehaviour
         HandleInput();
 
 
+        //マウス左クリックで弾呼び出し
         if (Input.GetMouseButtonDown(0))
         {
             UseWeapon();
+            Debug.Log("発射");
         }
     }
 
@@ -43,10 +46,11 @@ public class PlayerScript : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
     }
 
+    //弾の生成呼び出し
     private void UseWeapon()
     {
-
-        //TODO:銃ごとに分ける必要がある
         Instantiate(bullets, transform.position, Quaternion.identity);
+
+        Debug.Log("弾発射");
     }
 }

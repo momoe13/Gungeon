@@ -443,9 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743fb63de86aa6c47ad92102d3015611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets:
-  - {fileID: 4030068664722883478, guid: def0a0ceb7c00ad409bd79cc79419893, type: 3}
-  - {fileID: 3887329729352788252, guid: f1241251f2ce7014e8d35b5b9980eb7e, type: 3}
+  bullets: {fileID: 0}
 --- !u!61 &2008776787
 BoxCollider2D:
   m_ObjectHideFlags: 0
