@@ -11,19 +11,10 @@ public class EnemyMove : MonoBehaviour
     NavMeshAgent2D agent;   //NavMesh2Dを使用するための変数
     [SerializeField]
     Transform target;       //追跡するオブジェクト
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
 
     
     [SerializeField]
     bool searchFlg = false; //プレイヤーとの距離判定
-
-    [SerializeField]
-    int attackCount;      //攻撃秒数
-    int timeCount;        //時間カウント
 
     [SerializeField] 
     private GameObject bullets;//弾
