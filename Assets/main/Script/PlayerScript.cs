@@ -28,7 +28,6 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             UseWeapon();
-            Debug.Log("”­ŽË");
         }
     }
 
@@ -51,6 +50,5 @@ public class PlayerScript : MonoBehaviour
     {
         Instantiate(bullets, transform.position, Quaternion.identity);
 
-        Debug.Log("’e”­ŽË");
     }
 }

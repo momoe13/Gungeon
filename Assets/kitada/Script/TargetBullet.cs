@@ -30,6 +30,7 @@ public class TargetBullet : MonoBehaviour
         if (collision.tag != attackTag && collision.tag != attackTag + "Attack")//弾を放ったキャラ以外か同じTag以外のオブジェクトに触れたとき
         {
             Destroy(this.gameObject);//このオブジェクトを削除
+            
         }
     }
 }
