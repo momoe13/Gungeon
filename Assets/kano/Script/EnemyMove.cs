@@ -25,11 +25,11 @@ public class EnemyMove : MonoBehaviour
     float attackTime;         //攻撃タイミング
     float timeCount;          //秒数カウント
 
-    [SerializeField]
-    int attackCount;          //リロードまでのカウント
+    //[SerializeField]
+    //int attackCount;          //リロードまでのカウント
     
-    [SerializeField]
-    float reloadTime;         //リロードの秒数
+    //[SerializeField]
+    //float reloadTime;         //リロードの秒数
     
     [SerializeField]
     int hp;                   //体力
@@ -65,7 +65,7 @@ public class EnemyMove : MonoBehaviour
             timeCount = 0;
 
             //リロードのカウントダウン
-            attackCount--;
+            //attackCount--;
         }
 
         //TODO:リロード処理
