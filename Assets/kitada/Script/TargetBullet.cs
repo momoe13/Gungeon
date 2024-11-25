@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetBullet : MonoBehaviour
+public class TargetBullet : WeaponBase
 {
+    public int bNum = 0;//’e”
+
     [SerializeField] private float speed;//’e‚Ì‘¬“x
     [SerializeField] private string attackTag;//’e‚ÌTag
 
