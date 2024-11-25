@@ -8,6 +8,8 @@ public class RadiationBulletHub : MonoBehaviour
 
     [HideInInspector] public float degBullet;//’e“¹‚ÌŠp“x
 
+    public int bNum;//’e”
+
     [SerializeField] private GameObject bullet;
     [SerializeField] private float speed;//’e‚Ì‘¬“x
     [SerializeField] private float startDeg = 0f;//’e‚Ìon‚ß‚éŠp“x
@@ -31,7 +33,7 @@ public class RadiationBulletHub : MonoBehaviour
             bullets.Add(b);//¶¬‚µ‚½’e‚ğƒŠƒXƒg‚É’Ç‰Á
             Fire(b.GetComponent<RBullet>(),i);
         }
-        Destroy(this.gameObject, 1f);//ˆê•bŒã‚ÉHub‚ğíœ
+        Destroy(this.gameObject);//ˆê•bŒã‚ÉHub‚ğíœ
     }
 
     private void Fire(RBullet b,int i)//’e‚Éî•ñ‚ğ“n‚·
