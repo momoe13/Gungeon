@@ -28,4 +28,12 @@ public class EnemyBullet : MonoBehaviour
         rb.velocity = new Vector2(cos * speed, sin * speed);//求めたsincosを速度に代入する
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if(collision.gameObject.CompareTag(Wall))
+        //{
+        //    Destroy(this.gameObject);//このオブジェクトを削除
+        //}
+
+    }
 }

@@ -85,16 +85,20 @@ public class EnemyMove : MonoBehaviour
     //敵本体の当たり判定
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        Debug.Log("ダメージ判定できてない");
         //プレイヤーの弾に当たったらHP減少
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
             Damage();
+            Debug.Log("ダメージ");
         }
+
     }
 
     private void Attack()
     {
-        //TODO:01 プレイヤーの位置を取得し、プレイヤーに近い位置から弾を生成
+        // プレイヤーの位置を取得し、プレイヤーに近い位置から弾を生成
         Instantiate(bullets, gun.position, Quaternion.identity);
     }
 
@@ -107,6 +111,7 @@ public class EnemyMove : MonoBehaviour
         { 
            Destroy(this.gameObject);
         }
+  
     }
 }
 

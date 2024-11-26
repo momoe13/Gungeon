@@ -27,7 +27,7 @@ public class TargetBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != attackTag && collision.tag != attackTag + "Attack")//弾を放ったキャラ以外か同じTag以外のオブジェクトに触れたとき
+        if (collision.tag != attackTag && collision.tag != attackTag + "Attack" && !collision.gameObject.CompareTag("Untagged"))//弾を放ったキャラ以外か同じTag以外のオブジェクトに触れたとき
         {
             Destroy(this.gameObject);//このオブジェクトを削除
             
