@@ -8,13 +8,21 @@ public class PlayerWeapon : MonoBehaviour
 
     private int weaponNumber;//武器の総数
     private int weaponIndex = 0;//現在の武器番号
+    private int[] bulletNumber;//武器ごとの弾数
 
     void Start()
     {
         weaponNumber = bullets.Length;//武器の要素数を取得
     }
 
-    // Update is called once per frame
+    private void SetbulletNumber()
+    {
+        for (int i = 0; i < weaponNumber; i++)
+        {
+            
+        }
+    }
+
     void Update()
     {
         //Eキーを押したとき使用する武器を変える
