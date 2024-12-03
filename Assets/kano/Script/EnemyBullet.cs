@@ -8,19 +8,19 @@ public class EnemyBullet : MonoBehaviour
 
     [SerializeField] private float speed;
 
-    [SerializeField]
-    Transform playerPos;
+    Vector2 playerPos;
 
     private Rigidbody2D rb;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerPos = GameObject.Find("Player").transform.position;
         Shot();
     }
 
     private void Shot()
     {
-        Vector2 targetPos = playerPos.position;
+        Vector2 targetPos = playerPos;
         Vector2 dis = new Vector2(targetPos.x, targetPos.y) - new Vector2(transform.position.x, transform.position.y);//マウスの位置と弾の初期位置間の距離を取得
         float rad = Mathf.Atan2(dis.y, dis.x);//二点間の距離から角度(ラジアン)を求める
         float sin = Mathf.Sin(rad);//ラジアンからsinを求める
