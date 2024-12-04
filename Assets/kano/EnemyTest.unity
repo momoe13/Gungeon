@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120914876}
   - component: {fileID: 120914875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1039989558}
   - component: {fileID: 1039989557}
   - component: {fileID: 1039989556}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u5EFA\u7269"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251697624}
   - component: {fileID: 1251697623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 1551563508}
   - component: {fileID: 1551563511}
   - component: {fileID: 1551563510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u4E0B\u5730"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2661,6 +2661,38 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1744901687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1383020957811944891, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+  m_PrefabInstance: {fileID: 7722324949419578579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1744901692
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744901687}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1885409361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,6 +2864,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 72288569547212533, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 192052378812425629, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 312665586857847232, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
       propertyPath: hp
       value: 3
@@ -2843,6 +2883,18 @@ PrefabInstance:
     - target: {fileID: 1383020957811944891, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383020957811944891, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512273187388772866, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512273187388772866, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8682636064740370208, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
       propertyPath: player
@@ -2891,7 +2943,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1383020957811944891, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1744901692}
   m_SourcePrefab: {fileID: 100100000, guid: 3b53b9be295eb7843ab9b646f6be2967, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

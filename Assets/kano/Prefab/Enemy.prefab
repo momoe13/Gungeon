@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 5315902159593090223}
   - component: {fileID: 6823337437259048974}
   - component: {fileID: 312665586857847232}
+  - component: {fileID: 3914410232183010497}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -231,5 +232,33 @@ MonoBehaviour:
   target: {fileID: 0}
   searchFlg: 0
   bullets: {fileID: 2938748721716187275, guid: 5277a319ed692b947bedbcfa5e73df15, type: 3}
+  player: {fileID: 0}
   attackTime: 1
   hp: 0
+--- !u!50 &3914410232183010497
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383020957811944891}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
