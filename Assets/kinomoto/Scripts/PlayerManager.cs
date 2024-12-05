@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+    [SerializeField]
+    public float HP;      //HP‚Ì•Ï”
 
     private Rigidbody2D rb;
     private float horizontal;
@@ -33,5 +35,18 @@ public class PlayerManager : MonoBehaviour
         //Šµ«‚È‚µ‚ÌˆÚ“®
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("EnemyBullet") )
+        {
+            Debug.Log("“–‚½‚Á‚½");
+            HP -= 1;
+        }
+    }
+
+    public float GetHp()
+    {
+        return HP;
     }
 }
