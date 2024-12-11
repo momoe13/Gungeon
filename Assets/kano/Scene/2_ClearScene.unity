@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 1036290417}
   - component: {fileID: 1036290416}
   - component: {fileID: 1036290415}
+  - component: {fileID: 1036290418}
   m_Layer: 5
   m_Name: TitleBotton
   m_TagString: Untagged
@@ -273,7 +274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1036290416}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1036290418}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: GetButton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0_TitleScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1036290416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +325,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036290413}
   m_CullTransparentMesh: 1
+--- !u!114 &1036290418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036290413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ef5c2fa8fe0cd42832929f3e08651d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1710666767
 GameObject:
   m_ObjectHideFlags: 0
