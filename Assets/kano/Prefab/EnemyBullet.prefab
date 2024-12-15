@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1056285738487141984}
   m_Layer: 8
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  playerPos: {fileID: 600241775464539433, guid: adb9c1e1e55680c429f6f625310d2e07, type: 3}
 --- !u!50 &4669993414953093795
 Rigidbody2D:
   serializedVersion: 4

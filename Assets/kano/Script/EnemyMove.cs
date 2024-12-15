@@ -21,10 +21,6 @@ public class EnemyMove : MonoBehaviour
 
     private Transform gun;
 
-
-    [SerializeField]
-    Transform player;   //プレイヤーの位置
-
     [SerializeField]
     float attackTime;         //攻撃タイミング
     float timeCount;          //秒数カウント

@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+
+    [SerializeField]
+    public float HP;      //HPÇÃïœêî
 
     private Rigidbody2D rb;
     private float horizontal;
@@ -50,5 +51,17 @@ public class PlayerScript : MonoBehaviour
     {
         Instantiate(bullets, transform.position, Quaternion.identity);
 
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("EnemyBullet"))
+        {
+            HP -= 1;
+        }
+    }
+
+    public float GetHp()
+    {
+        return HP;
     }
 }
