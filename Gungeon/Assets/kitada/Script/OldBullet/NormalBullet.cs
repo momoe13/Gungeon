@@ -20,7 +20,7 @@ public class NormalBullet : MonoBehaviour
         //sin,cos‚ğ‹‚ß‚é
         float sin = Mathf.Sin(rad);
         float cos = Mathf.Cos(rad);
-
+        
         rb.velocity = new Vector2(cos * speed, sin * speed);
     }
 }

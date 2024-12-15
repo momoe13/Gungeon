@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   degBullet: 0
+  bNum: 4
   bullet: {fileID: 3657495644861345709, guid: 29522524a74735042b9bcca6d92780a3, type: 3}
   speed: 5
   startDeg: 0

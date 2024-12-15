@@ -12,19 +12,21 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        weaponNumber = bullets.Length;//武器の要素数を取得
+        SetbulletNumber();
     }
 
     private void SetbulletNumber()
     {
+        weaponNumber = bullets.Length;//武器の要素数を取得
         for (int i = 0; i < weaponNumber; i++)
         {
-            
+            Debug.Log("a");
         }
     }
 
     void Update()
     {
+
         //Eキーを押したとき使用する武器を変える
         //武器番号を変更
         //現在の武器が武器番号の最後の時、武器番号をリセットする

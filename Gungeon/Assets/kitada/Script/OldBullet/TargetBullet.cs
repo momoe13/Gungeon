@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetBullet : WeaponBase
+public class TargetBullet : MonoBehaviour
 {
-    public int bNum = 0;//弾数
-
     [SerializeField] private float speed;//弾の速度
     [SerializeField] private string attackTag;//弾のTag
 
@@ -14,13 +12,23 @@ public class TargetBullet : WeaponBase
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Shot();
+        if (attackTag == "Player")//プレイヤーが使用するとき
+        {
+            Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);//マウスの座標を取得
+            Shot(targetPos);
+        }
+        else//敵が使用するとき
+        {
+            GameObject player = GameObject.Find("Player");//プレイヤーのゲームオブジェクトを取得
+            Vector3 targetPos = player.transform.position;//プレイヤーの位置を取得
+            Shot(targetPos);
+        }
     }
 
-    private void Shot()
+    private void Shot(Vector3 targetPos)
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);//マウスの座標を取得
-        Vector2 dis = new Vector2(mousePos.x, mousePos.y) - new Vector2(transform.position.x, transform.position.y);//マウスの位置と弾の初期位置間の距離を取得
+       
+        Vector2 dis = new Vector2(targetPos.x, targetPos.y) - new Vector2(transform.position.x, transform.position.y);//マウスの位置と弾の初期位置間の距離を取得
         float rad = Mathf.Atan2(dis.y, dis.x);//二点間の距離から角度(ラジアン)を求める 
         float sin = Mathf.Sin(rad);//ラジアンからsinを求める
         float cos = Mathf.Cos(rad);//ラジアンからcosを求める
