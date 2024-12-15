@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/kano/Scene/2_ClearScene.unity
     guid: fdf8121a49732c946a062a9505f9e51f
+  - enabled: 1
+    path: Assets/kano/Scene/3_GameOverScene.unity
+    guid: c9e26e2116256d149bde1c45e5ce0b4c
   m_configObjects: {}
