@@ -179,6 +179,18 @@ PrefabInstance:
       propertyPath: bullets
       value: 
       objectReference: {fileID: 4030068664722883478, guid: ef846ba1dc6347043abf81f4b57c7efd, type: 3}
+    - target: {fileID: 932713563544767753, guid: bf588d3a7bb07aa4fa7bdb5fe225e3aa, type: 3}
+      propertyPath: bullets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932713563544767753, guid: bf588d3a7bb07aa4fa7bdb5fe225e3aa, type: 3}
+      propertyPath: bullets.Array.data[0]
+      value: 
+      objectReference: {fileID: 4030068664722883478, guid: ef846ba1dc6347043abf81f4b57c7efd, type: 3}
+    - target: {fileID: 932713563544767753, guid: bf588d3a7bb07aa4fa7bdb5fe225e3aa, type: 3}
+      propertyPath: bullets.Array.data[1]
+      value: 
+      objectReference: {fileID: 3657495644861345709, guid: 705642ec961afb54ab657465a3d8922e, type: 3}
     - target: {fileID: 2209645540399211268, guid: bf588d3a7bb07aa4fa7bdb5fe225e3aa, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16356,7 +16368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2105413836
 Transform:
   m_ObjectHideFlags: 0

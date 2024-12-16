@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8208546706189492501}
   m_Layer: 8
   m_Name: RadianBHub
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   degBullet: 0
+  bNum: 0
   bullet: {fileID: 3657495644861345709, guid: 29522524a74735042b9bcca6d92780a3, type: 3}
   speed: 5
   startDeg: 0

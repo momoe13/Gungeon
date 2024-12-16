@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1335992099434654967}
   - component: {fileID: 1048378961695537916}
   - component: {fileID: 3475889400486716506}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RBullet
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
