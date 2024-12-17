@@ -11,16 +11,21 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody2D rb;
     private float horizontal;
     private float vertical;
+    private Animator animator;
 
     private void Awake()
     {
         //リジッドボディの取得
         rb = GetComponent<Rigidbody2D>();
+
+        //アニメーターの取得
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         HandleInput();
+        MoveAnimation();
     }
 
     private void FixedUpdate()
@@ -36,9 +41,42 @@ public class PlayerManager : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
     }
+
+    private void MoveAnimation()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("Up", true);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("Left", true);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("Down", true);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("Right", true);
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A)
+            || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Left", false);
+            animator.SetBool("Right", false);
+        }
+
+        if (HP == 0)
+        {
+            animator.SetBool("Gameover", true);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("EnemyBullet") )
+        if (col.gameObject.CompareTag("EnemyBullet"))
         {
             Debug.Log("当たった");
             HP -= 1;
