@@ -13,10 +13,6 @@ public class PlayerScript : MonoBehaviour
 
     private Animator animator;
 
-    [SerializeField] private GameObject[] bullets;//武器を入れる配列
-    private int weaponNumber;//武器の総数
-    private int weaponIndex = 0;//現在の武器番号
-    private int[] bulletNumber;//武器ごとの弾数
 
     [Header("回避速度")][SerializeField] private float dodgeSpeed = 0;//回避中の速度
     [Header("回避時間")][SerializeField] private float dodgeTime = 0;//回避時間
@@ -31,8 +27,6 @@ public class PlayerScript : MonoBehaviour
         //アニメーターの取得
         animator = GetComponent<Animator>();
 
-        //武器の要素数を取得
-        weaponNumber = bullets.Length;
     }
 
     private void Update()
@@ -44,33 +38,15 @@ public class PlayerScript : MonoBehaviour
         {
             DodgeMove();
         }
-        //Eキーを押したとき使用する武器を変える
-        //武器番号を変更
-        //現在の武器が武器番号の最後の時、武器番号をリセットする
-        if (Input.GetKeyDown("e"))
-        {
-            if (weaponIndex == weaponNumber - 1)
-            {
-                weaponIndex = 0;
-            }
-            else
-            {
-                weaponIndex++;
-            }
-        }
-
-        //マウス左クリックで弾呼び出し
-        if (Input.GetMouseButtonDown(0))
-        {
-            UseWeapon();
-        }
-
     }
 
     private void FixedUpdate()
     {
-        Vector2 newVelocity = new Vector2(horizontal, vertical) * speed;
-        rb.velocity = newVelocity;
+        if (!isDodge)//回避中は移動しない
+        {
+            Vector2 newVelocity = new Vector2(horizontal, vertical) * speed;
+            rb.velocity = newVelocity;
+        }
     }
 
     private void HandleInput()
@@ -79,13 +55,6 @@ public class PlayerScript : MonoBehaviour
         //慣性なしの移動
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-    }
-
-    //弾の生成呼び出し
-    private void UseWeapon()
-    {
-        Instantiate(bullets[weaponIndex], transform.position, Quaternion.identity);//弾を生成
-
     }
 
     //回避の処理
