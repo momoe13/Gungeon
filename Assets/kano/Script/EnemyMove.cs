@@ -19,7 +19,11 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] 
     private GameObject bullets;//弾
 
-    private Transform gun; 
+    private Transform gun;
+
+
+    [SerializeField]
+    Transform player;   //プレイヤーの位置
 
     [SerializeField]
     float attackTime;         //攻撃タイミング
