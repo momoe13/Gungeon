@@ -97,13 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195758b900247074dbcbb005d658d276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: "\u5186\u72B6"
   bullet: {fileID: -6106591365131012530, guid: bc2905400ac06e44cb49ecb1dbca9cb0, type: 3}
   MaxBulletNum: 60
   speed: 10
   rate: 0.5
   reloadTime: 1
   angle: 0
-  auto: 0
+  auto: 1
   curBulletRemain: 0
   isReloading: 0
   isTrigger: 0
