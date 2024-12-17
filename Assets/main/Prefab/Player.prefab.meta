@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: bf588d3a7bb07aa4fa7bdb5fe225e3aa
+<<<<<<<< HEAD:Assets/kinomoto/Prefab/Player.prefab.meta
+guid: 0ffe1c03adf86cc49beac4fe1916d857
+========
+guid: 358635ad4b340604da297786c0ebd896
+>>>>>>>> 805609e2399804b60781317393a4c25a9fa8e63a:Assets/kinomoto/Scripts/main/Prefab/Enemy1.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
