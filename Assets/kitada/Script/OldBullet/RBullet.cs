@@ -8,7 +8,6 @@ public class RBullet : MonoBehaviour
     [HideInInspector] public float speed = 1;
     [HideInInspector] public string aTag;
 
-    private  bool isAddList = false;
     private Rigidbody2D rb;
 
     public void Shot()

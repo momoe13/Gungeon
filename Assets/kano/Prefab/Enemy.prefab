@@ -231,5 +231,6 @@ MonoBehaviour:
   target: {fileID: 0}
   searchFlg: 0
   bullets: {fileID: 2938748721716187275, guid: 5277a319ed692b947bedbcfa5e73df15, type: 3}
+  player: {fileID: 0}
   attackTime: 1
   hp: 0

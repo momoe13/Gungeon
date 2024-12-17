@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyBullet
+
+  - PlayerAttack
+  - Wall
+  - Enemy
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX

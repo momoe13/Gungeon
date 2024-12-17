@@ -36,7 +36,7 @@ public class RadiationBulletHub : MonoBehaviour
         Destroy(this.gameObject);//ˆê•bŒã‚ÉHub‚ğíœ
     }
 
-    private void Fire(RBullet b,int i)//’e‚Éî•ñ‚ğ“n‚·
+    private void  Fire(RBullet b,int i)//’e‚Éî•ñ‚ğ“n‚·
     {
         float bulletRad = 360 / bulletNumber;//’eŠÔ‚ÌŠp“x‚ğ‹‚ß‚é
         if (b == null) 

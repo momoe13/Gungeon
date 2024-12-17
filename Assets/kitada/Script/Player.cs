@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(CircleCollider2D))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
@@ -10,8 +11,8 @@ public class Player : MonoBehaviour
     private float horizontal;
     private float vertical;
     //----
-    [SerializeField] private float dodgeSpeed = 0;//‰ñ”ð’†‚Ì‘¬“x
-    [SerializeField] private float dodgeTime = 0;//‰ñ”ðŽžŠÔ
+    [Header("‰ñ”ð‘¬“x")][SerializeField] private float dodgeSpeed = 0;//‰ñ”ð’†‚Ì‘¬“x
+    [Header("‰ñ”ðŽžŠÔ")][SerializeField] private float dodgeTime = 0;//‰ñ”ðŽžŠÔ
     private bool isDodge = false;//‰ñ”ð’†‚©”Û‚©
 
     private void Awake()
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     {
         HandleInput();
         //----
+      
         if (Input.GetMouseButtonDown(1) && !isDodge)
         {
             DodgeMove();
