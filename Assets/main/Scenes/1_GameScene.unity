@@ -141,6 +141,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3123056682012709947, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: dodgeTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3123056682012709947, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: dodgeSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -3123056682012709947, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
       propertyPath: bullets.Array.data[0]
       value: 
       objectReference: {fileID: 4030068664722883478, guid: ef846ba1dc6347043abf81f4b57c7efd, type: 3}

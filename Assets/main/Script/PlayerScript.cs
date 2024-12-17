@@ -69,6 +69,7 @@ public class PlayerScript : MonoBehaviour
             rb.velocity = new Vector2(cos * dodgeSpeed, sin * dodgeSpeed);//‹‚ß‚½sincos‚ğ‘¬“x‚É‘ã“ü‚·‚é
             isDodge = true;
             Invoke(nameof(DodgeSpan), dodgeTime);//dodgeTime‚Ì•ª‚¾‚¯’x‚ç‚¹‚Ä‚©‚çŒÄ‚Ño‚·
+            Debug.Log("‰ñ”ğ");
         }
     }
 
