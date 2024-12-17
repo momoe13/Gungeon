@@ -14,10 +14,13 @@ public class PlayerScript : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private GameObject[] bullets;//武器を入れる配列
-
     private int weaponNumber;//武器の総数
     private int weaponIndex = 0;//現在の武器番号
     private int[] bulletNumber;//武器ごとの弾数
+
+    [Header("回避速度")][SerializeField] private float dodgeSpeed = 0;//回避中の速度
+    [Header("回避時間")][SerializeField] private float dodgeTime = 0;//回避時間
+    private bool isDodge = false;//回避中か否か
 
 
     private void Awake()
@@ -37,7 +40,10 @@ public class PlayerScript : MonoBehaviour
         HandleInput();
         MoveAnimation();
 
-
+        if (Input.GetMouseButtonDown(1) && !isDodge)
+        {
+            DodgeMove();
+        }
         //Eキーを押したとき使用する武器を変える
         //武器番号を変更
         //現在の武器が武器番号の最後の時、武器番号をリセットする
@@ -81,6 +87,28 @@ public class PlayerScript : MonoBehaviour
         Instantiate(bullets[weaponIndex], transform.position, Quaternion.identity);//弾を生成
 
     }
+
+    //回避の処理
+    private void DodgeMove()
+    {
+        Vector2 dis = new Vector2(horizontal, vertical) - new Vector2(0, 0);//移動距離のベクトルを取得
+        if (dis.magnitude > 0)//距離が0より大きいとき
+        {
+            float rad = Mathf.Atan2(dis.y, dis.x);//二点間の距離から角度(ラジアン)を求める 
+            float sin = Mathf.Sin(rad);//ラジアンからsinを求める
+            float cos = Mathf.Cos(rad);//ラジアンからcosを求める
+            rb.velocity = new Vector2(cos * dodgeSpeed, sin * dodgeSpeed);//求めたsincosを速度に代入する
+            isDodge = true;
+            Invoke(nameof(DodgeSpan), dodgeTime);//dodgeTimeの分だけ遅らせてから呼び出す
+        }
+    }
+
+    //回避のフラグをfalseに
+    private void DodgeSpan()
+    {
+        isDodge = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("EnemyBullet"))

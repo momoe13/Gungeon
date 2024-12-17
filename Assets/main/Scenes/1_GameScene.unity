@@ -148,6 +148,34 @@ PrefabInstance:
       propertyPath: bullets.Array.data[1]
       value: 
       objectReference: {fileID: 3657495644861345709, guid: 705642ec961afb54ab657465a3d8922e, type: 3}
+    - target: {fileID: 283842538709067903, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 286195530639030363, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 286195530639030363, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 5054325858620918418, guid: 7f1f108bbbd66da4a893665cab9b9ef8, type: 3}
+    - target: {fileID: 286195530639030363, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 9029690653117236371, guid: e7925067716aca6479fe21169183e1f5, type: 3}
+    - target: {fileID: 653383092847203955, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 653383092847203955, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293586172176369106, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 6319305833469664252, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.96
@@ -188,13 +216,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7158908235230731551, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311909154496349048, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7447962437362178458, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7447962437362178458, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447962437362178458, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164615344058422346, guid: 0ffe1c03adf86cc49beac4fe1916d857, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
