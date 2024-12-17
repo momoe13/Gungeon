@@ -19,7 +19,6 @@ public class HPManager : MonoBehaviour
     private void Start()
     {
         playersc = player.GetComponent<PlayerManager>();
-
     }
 
     //敵の弾に当たった時にHPを減らす処理
@@ -34,10 +33,11 @@ public class HPManager : MonoBehaviour
     private void Update()           //HPがゼロになったときにゲームオーバーシーンを呼び出す
     {
 
-         float HP= playersc.GetHp();
-        switch (HP) 
+        float HP = playersc.GetHp();
+        switch (HP)
         {
-            case  0:
+            case 0:
+                HPUIobj_3.SetActive(false);
                 break;
 
             case 1:
@@ -47,10 +47,12 @@ public class HPManager : MonoBehaviour
             case 2:
                 HPUIobj_1.SetActive(false);
                 break;
-        
-        
-        
-        
+            case 3:
+                break;
+
+
+
+
         }
         //if (HP <= 0)
         //{
